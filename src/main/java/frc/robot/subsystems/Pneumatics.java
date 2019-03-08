@@ -25,9 +25,9 @@ public class Pneumatics extends Subsystem {
 	public void periodic() {
         //Turn compressor off if the Smartdashboard check box is checked
         if (SmartDashboard.getBoolean("Compressor ENABLE", true)) {
-			Robot.pneumatics.compressor.start();
+			compressor.start();
 		} else {
-			Robot.pneumatics.compressor.stop();
+			compressor.stop();
 		}
     }
     

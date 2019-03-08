@@ -34,13 +34,13 @@ public class Dashboard {
     //Check each subsystems dashboard values and update them
     private static void updatePutShort() {
         Robot.vision.dashboard();
-        SmartDashboard.putBoolean("OperatorButtonPushed", HW.oi.isOperatorButtonPushed());
-        SmartDashboard.putBoolean("DriverButtonPushed", HW.oi.isDriverButtonPushed());
+        //SmartDashboard.putBoolean("OperatorButtonPushed", HW.oi.isOperatorButtonPushed());
+        //SmartDashboard.putBoolean("DriverButtonPushed", HW.oi.isDriverButtonPushed());
     }
 
     //Things that don't need to be sent out each cycle
     private static void updatePutLong(){
-    	SmartDashboard.putBoolean("Compressor On?", Robot.pneumatics.compressor.enabled());
+    	//SmartDashboard.putBoolean("Compressor On?", Robot.pneumatics.compressor.enabled());
 		
 		//Can change to show a different message than "Yes" and "No"
 		SmartDashboard.putBoolean("Change Battery", Util.changeBattery() ? true : false);

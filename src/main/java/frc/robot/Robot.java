@@ -44,13 +44,14 @@ public class Robot extends TimedRobot {
 	public static SpectrumPreferences prefs;
 	
 	public static PigeonIMU pigeon;
-	public static Pneumatics pneumatics;
+	//public static Pneumatics pneumatics;
 	public static Vision vision;
 	
 	public static void setupSubsystems(){
 		prefs = SpectrumPreferences.getInstance();
-		pneumatics = new Pneumatics();
+		//pneumatics = new Pneumatics();
 		vision = new Vision();
+
     }
 	
 	//Used to keep track of the robot current state easily

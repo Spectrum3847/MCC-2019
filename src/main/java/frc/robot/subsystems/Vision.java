@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.command.PIDSubsystem;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.lib.drivers.LimeLight;
-//import frc.lib.drivers.SpectrumJeVois;
+import frc.lib.drivers.SpectrumJeVois;
 import frc.lib.drivers.LimeLightControlModes.LedMode;
 import frc.robot.Robot;
 import frc.robot.Robot.RobotState;
@@ -15,6 +15,7 @@ public class Vision extends PIDSubsystem{
     //Use this for limelight code and Jevois code
     
     public final LimeLight limelight;
+    public final SpectrumJeVois jevoisCam;
     private boolean m_LimelightHasValidTarget = false;
     private double m_LimelightDriveCommand = 0.0;
     private double m_LimelightSteerCommand = 0.0;
@@ -25,8 +26,8 @@ public class Vision extends PIDSubsystem{
     public Vision(){
         super(0.0,0.0,0.0);
         limelight = new LimeLight();
-        //jevoisCam = new SpectrumJeVois();
-        //jevoisCam.setSerOutEnable(true);
+        jevoisCam = new SpectrumJeVois();
+        jevoisCam.setSerOutEnable(true);
         setInputRange(-27, 27);
         setOutputRange(-.3, .3 );
         setSetpoint(0.0);

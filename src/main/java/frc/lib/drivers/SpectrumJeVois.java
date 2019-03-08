@@ -88,7 +88,7 @@ public class SpectrumJeVois {
 	public void connectJeVois(){
 		int retry_counter = 0;
 		//Retry strategy to get this serial port open or switch to the other usb ports
-		while(visionPort == null && retry_counter++ < 10){
+		while(visionPort == null && retry_counter++ < 30){
 			try {
 				System.out.print("Creating JeVois SerialPort...");
 				visionPort = new SerialPort(BAUD_RATE,SerialPort.Port.kUSB);

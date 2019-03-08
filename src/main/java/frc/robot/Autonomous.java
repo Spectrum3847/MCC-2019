@@ -21,7 +21,7 @@ public class Autonomous {
 	public static void cancel() {
 		Scheduler.getInstance().removeAll();
 		SpectrumLogger.getInstance().addEvent("System", "Auto Complete");
-		Robot.pneumatics.compressor.start();
+		//Robot.pneumatics.compressor.start();
 	}
 
     public static void printDebug(String msg){
