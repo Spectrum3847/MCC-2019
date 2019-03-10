@@ -91,12 +91,12 @@ public class SpectrumJeVois {
 		while(visionPort == null && retry_counter++ < 30){
 			try {
 				System.out.print("Creating JeVois SerialPort...");
-				visionPort = new SerialPort(BAUD_RATE,SerialPort.Port.kUSB);
+				visionPort = new SerialPort(BAUD_RATE,SerialPort.Port.kUSB2);
 				System.out.println("SUCCESS!!");
 			} catch (Exception e) {
 				try {
 					System.out.print("Creating JeVois SerialPort...");
-					visionPort = new SerialPort(BAUD_RATE,SerialPort.Port.kUSB1);
+					visionPort = new SerialPort(BAUD_RATE,SerialPort.Port.kUSB2);
 					System.out.println("SUCCESS!!");
 				} catch (Exception f) {
 					try {
